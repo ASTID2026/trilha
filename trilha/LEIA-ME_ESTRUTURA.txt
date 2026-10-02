@@ -1,0 +1,186 @@
+AUDTRILHAS DOU — EDIÇÃO OFFLINE
+================================
+
+1. FINALIDADE
+-------------
+Esta edição executa o AudTrilhas integralmente no computador local. O envio,
+o processamento e a análise dos arquivos CSV do Ro-DOU não dependem de API,
+nuvem ou serviço externo. A única exceção é o botão "Acessar publicação", que
+precisa de internet para abrir o endereço original do Diário Oficial da União.
+
+O sistema preserva:
+- o arquivo CSV original recebido;
+- uma representação JSON das publicações e dos alertas gerados no processamento;
+- publicações normalizadas, alertas, trilhas e parâmetros no banco SQLite;
+- status, observações, responsável e histórico cronológico de cada análise;
+- a seleção de um ou mais arquivos para análise consolidada;
+- a identificação do arquivo por hash SHA-256, evitando duplicidades.
+
+
+2. REQUISITO
+------------
+É necessário ter o Python 3.10 ou superior instalado. Não há bibliotecas
+adicionais para instalar e o AudTrilhas não utiliza conexão com a internet.
+
+No Windows, durante a instalação do Python, marque "Add Python to PATH".
+
+
+3. COMO INICIAR
+---------------
+Windows:
+1) Extraia todo o conteúdo do ZIP para uma pasta comum do computador.
+2) Não execute o sistema diretamente de dentro do ZIP.
+3) Dê dois cliques em INICIAR_AUDTRILHAS.bat.
+4) O navegador será aberto automaticamente.
+5) Para encerrar, feche a janela do navegador e pressione Ctrl+C na janela preta.
+
+Linux/macOS:
+1) Abra o terminal na pasta do AudTrilhas.
+2) Execute: chmod +x iniciar_audtrilhas.sh criar_backup.sh
+3) Execute: ./iniciar_audtrilhas.sh
+
+O endereço padrão é http://127.0.0.1:8765/. Se a porta estiver ocupada, o
+sistema escolherá automaticamente uma das portas seguintes e mostrará o novo
+endereço na tela.
+
+
+4. ESTRUTURA DAS PASTAS
+-----------------------
+AudTrilhas-Offline/
+|
+|-- INICIAR_AUDTRILHAS.bat       Inicia o sistema no Windows.
+|-- iniciar_audtrilhas.sh        Inicia o sistema no Linux/macOS.
+|-- CRIAR_BACKUP.bat             Gera backup no Windows.
+|-- criar_backup.sh              Gera backup no Linux/macOS.
+|-- LEIA-ME_ESTRUTURA.txt        Este documento.
+|-- VERSAO.txt                   Identificação da versão.
+|
+|-- aplicativo/
+|   |-- servidor.py              Servidor web local e rotas da aplicação.
+|   |-- banco.py                 Esquema, consultas e persistência SQLite.
+|   |-- motor_auditoria.py       Leitura do CSV, normalização e trilhas T01-T09.
+|   |-- backup.py                Rotina de cópia consistente do acervo.
+|   |-- recursos/
+|   |   `-- uasg-comaer.json     Relação código/nome/UF das UASG do COMAER.
+|   `-- web/                     Interface pronta para uso no navegador.
+|
+|-- dados/
+|   |-- banco/
+|   |   `-- audtrilhas.db        Banco SQLite principal e autoritativo.
+|   |-- arquivos/
+|   |   |-- originais/           CSVs preservados por ano e mês.
+|   |   `-- processados/         JSONs normalizados por ano e mês.
+|   |-- exportacoes/             Pasta reservada para produtos exportados.
+|   |-- backups/                 Pacotes de backup gerados pelo sistema.
+|   |-- logs/
+|   |   `-- audtrilhas.log       Registro técnico rotativo da execução.
+|   `-- temporarios/             Arquivos transitórios de gravação segura.
+|
+|-- exemplos/
+|   `-- extracao_dou_exemplo.csv Arquivo apenas para teste inicial.
+|
+|-- frontend-src/                Código-fonte da interface para manutenção.
+|
+`-- tests/
+    `-- test_offline.py          Teste automatizado do fluxo local completo.
+
+
+5. ORGANIZAÇÃO DOS ARQUIVOS PROCESSADOS
+---------------------------------------
+Cada CSV é armazenado em:
+  dados/arquivos/originais/AAAA/MM/
+
+O nome interno combina um identificador único e o nome seguro do arquivo. O
+nome apresentado na interface permanece o nome original.
+
+Os caminhos são gravados no banco de forma relativa à pasta dados. Assim, a
+pasta completa do AudTrilhas pode ser movida para outro local ou computador
+sem quebrar os vínculos com os arquivos já processados.
+
+Após o processamento, é criado um JSON em:
+  dados/arquivos/processados/AAAA/MM/
+
+O JSON contém os metadados da carga, as publicações normalizadas e os alertas
+na situação em que foram gerados. Ele é um retrato do processamento. Alterações
+posteriores de status, observações e responsável são registradas no banco
+SQLite e no histórico de eventos, que constituem a fonte autoritativa.
+
+
+6. BANCO DE DADOS
+-----------------
+Arquivo: dados/banco/audtrilhas.db
+
+Principais tabelas:
+- imports: arquivos recebidos, hash, quantidade de registros e seleção ativa;
+- publications: campos normalizados das publicações do DOU;
+- alerts: alertas, risco, status, responsável e conclusão do auditor;
+- alert_events: histórico imutável das mudanças de status e anotações;
+- trails: configuração de ativação das trilhas T01 a T09;
+- settings: materialidade, tempestividade, retenção e termos da T09;
+- uasg_directory: código, nome e UF das UASG do COMAER;
+- metadata: versão interna do esquema.
+
+O banco utiliza integridade referencial, exclusão em cascata, índices para as
+consultas frequentes e modo WAL. Não edite o arquivo enquanto o sistema estiver
+aberto. Para consulta técnica, utilize apenas uma cópia ou um programa que abra
+o SQLite em modo somente leitura.
+
+
+7. HISTÓRICO DAS ANÁLISES
+-------------------------
+Ao salvar uma Ficha de Análise, o sistema atualiza o alerta e cria um registro
+em alert_events com:
+- ação realizada;
+- status anterior e novo status;
+- observação registrada;
+- responsável pela operação;
+- data e hora.
+
+Após a confirmação da gravação, a interface recarrega os dados diretamente do
+banco local e reabre a mesma Ficha de Análise. Esse comportamento assegura que
+os campos exibidos correspondam ao conteúdo efetivamente persistido.
+
+Esse histórico permanece associado ao alerta enquanto o lote existir. A
+exclusão de um lote, confirmada na seção Arquivos, também exclui suas
+publicações, alertas e histórico do banco, além dos respectivos arquivos locais.
+
+
+8. BACKUP
+---------
+Windows: dê dois cliques em CRIAR_BACKUP.bat.
+Linux/macOS: execute ./criar_backup.sh.
+
+O backup é gravado em dados/backups/ com data e hora. Ele contém uma cópia
+consistente do banco e as pastas de arquivos originais, processados,
+exportações e logs. Recomenda-se copiar periodicamente o ZIP de backup para
+outro dispositivo ou unidade de rede institucional protegida.
+
+Para restaurar:
+1) Encerre o AudTrilhas.
+2) Faça uma cópia de segurança da pasta dados atual.
+3) Extraia o backup escolhido dentro da pasta dados, preservando a estrutura.
+4) Inicie novamente o sistema.
+
+
+9. PORTABILIDADE E SEGURANÇA
+----------------------------
+- Para transportar o sistema com os dados, copie toda a pasta AudTrilhas-Offline.
+- O servidor escuta apenas em 127.0.0.1; outros computadores da rede não têm
+  acesso por padrão.
+- Esta edição foi concebida para uso local por um auditor de cada vez.
+- Os arquivos não são enviados para serviços externos.
+- A conclusão sobre regularidade continua sendo responsabilidade do auditor;
+  os alertas são sinais para priorização e validação humana.
+
+
+10. SOLUÇÃO DE PROBLEMAS
+------------------------
+- Navegador não abriu: consulte o endereço exibido na janela do servidor.
+- Python não encontrado: instale Python 3.10+ e habilite-o no PATH.
+- Erro ao iniciar: consulte dados/logs/audtrilhas.log.
+- Arquivo recusado: confirme extensão CSV e cabeçalhos URL, Título, Resumo e Data.
+- Porta ocupada: use o endereço alternativo mostrado pelo sistema.
+- Tela em branco após salvar: utilize esta versão 1.0.1 ou superior e sempre
+  inicie o sistema pelos arquivos INICIAR_AUDTRILHAS.bat ou
+  iniciar_audtrilhas.sh; não abra aplicativo/web/index.html diretamente.
+- Antes de qualquer manutenção, gere um backup e encerre o servidor.

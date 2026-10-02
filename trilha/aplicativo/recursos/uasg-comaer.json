@@ -1,0 +1,496 @@
+{
+  "sourceFile": "UASG-COMAER.ods",
+  "checksum": "a8cd3d137ea58ee7bec7bead870f28e8a24a0d09f163557501e84709a2e605ff",
+  "units": [
+    {
+      "code": "120041",
+      "name": "0042-HOSPITAL DE AERONAUTICA DOS AFONSOS/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120060",
+      "name": "ACADEMIA DA FORCA AEREA",
+      "uf": "SP"
+    },
+    {
+      "code": "120624",
+      "name": "BASE AÉREA DE ANÁPOLIS",
+      "uf": "GO"
+    },
+    {
+      "code": "120087",
+      "name": "BASE AEREA DE BELEM",
+      "uf": "PA"
+    },
+    {
+      "code": "120085",
+      "name": "BASE AEREA DE BOA VISTA/RR",
+      "uf": "RR"
+    },
+    {
+      "code": "120637",
+      "name": "BASE AÉREA DE BOAVISTA",
+      "uf": "RR"
+    },
+    {
+      "code": "120638",
+      "name": "BASE AÉREA DE CAMPOGRANDE",
+      "uf": "MS"
+    },
+    {
+      "code": "120075",
+      "name": "BASE AEREA DE CANOAS-MAER/RS",
+      "uf": "RS"
+    },
+    {
+      "code": "120014",
+      "name": "BASE AEREA DE FORTALEZA/MAER - CE",
+      "uf": "CE"
+    },
+    {
+      "code": "120082",
+      "name": "BASE AÉREA DE MANAUS",
+      "uf": "AM"
+    },
+    {
+      "code": "120101",
+      "name": "BASE AÉREA DE NATAL",
+      "uf": "RN"
+    },
+    {
+      "code": "120631",
+      "name": "BASE AEREA DE NATAL - BANT",
+      "uf": "RN"
+    },
+    {
+      "code": "120641",
+      "name": "BASE AÉREA DE PORTOVELHO",
+      "uf": "RO"
+    },
+    {
+      "code": "120023",
+      "name": "BASE AEREA DE SALVADOR",
+      "uf": "BA"
+    },
+    {
+      "code": "120669",
+      "name": "BASE AéREA DE SANTA CRUZ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120031",
+      "name": "BASE AEREA DE SANTA CRUZ/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120076",
+      "name": "BASE AEREA DE SANTA MARIA",
+      "uf": "RS"
+    },
+    {
+      "code": "120643",
+      "name": "BASE AÉREA DE SANTA MARIA",
+      "uf": "RS"
+    },
+    {
+      "code": "120062",
+      "name": "BASE AEREA DE SAO PAULO",
+      "uf": "SP"
+    },
+    {
+      "code": "120018",
+      "name": "BASE AEREA DO RECIFE",
+      "uf": "PE"
+    },
+    {
+      "code": "120057",
+      "name": "CASA GERONTOLOGICA DA AER. BRIG.EDUARDO GOMES",
+      "uf": "RJ"
+    },
+    {
+      "code": "120195",
+      "name": "CENTRO DE AQUISIÇÕES ESPECIFICAS",
+      "uf": "RJ"
+    },
+    {
+      "code": "120015",
+      "name": "CENTRO DE LANCAMENTO DA BARREIRA DO INFERNO",
+      "uf": "RN"
+    },
+    {
+      "code": "120035",
+      "name": "CENTRO DE TRANSPORTE LOGÍSTICO DA AERONÁUTICA",
+      "uf": "RJ"
+    },
+    {
+      "code": "120071",
+      "name": "CENTRO LOGISTICO DA AERONAUTICA",
+      "uf": "SP"
+    },
+    {
+      "code": "120088",
+      "name": "COMISSAO DE AEROPORTOS DA REGIAO AMAZONICA",
+      "uf": "PA"
+    },
+    {
+      "code": "120127",
+      "name": "COMISSAO DE IMPLANT.DO SIST.DE CONTR.DO E AER",
+      "uf": "RJ"
+    },
+    {
+      "code": "120036",
+      "name": "DEPARTAMENTO DE CONTROLE DO ESPAÇO AÉREO",
+      "uf": "RJ"
+    },
+    {
+      "code": "120034",
+      "name": "DEPOSITO CENTRAL INTENDENCIA/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120002",
+      "name": "DIRETORIA DE ECON. E FINANçAS DA AERONáUTICA",
+      "uf": "DF"
+    },
+    {
+      "code": "120064",
+      "name": "ESCOLA DE ESPECIALISTAS DE AERONAUTICA",
+      "uf": "SP"
+    },
+    {
+      "code": "120065",
+      "name": "FAZENDA DE AERONAUTICA DE PIRASSUNUNGA",
+      "uf": "SP"
+    },
+    {
+      "code": "120001",
+      "name": "GABINETE DO COMANDANTE DA AERONAUTICA",
+      "uf": "DF"
+    },
+    {
+      "code": "120646",
+      "name": "GRUPAMENTO DE APOIO ÀS UND DO SIST DO CEA",
+      "uf": "RJ"
+    },
+    {
+      "code": "120196",
+      "name": "GRUPAMENTO DE APOIO DA SAUDE",
+      "uf": "RJ"
+    },
+    {
+      "code": "120627",
+      "name": "GRUPAMENTO DE APOIO DE ALCÂNTARA",
+      "uf": "MA"
+    },
+    {
+      "code": "120634",
+      "name": "GRUPAMENTO DE APOIO DE BARBACENA",
+      "uf": "MG"
+    },
+    {
+      "code": "120628",
+      "name": "GRUPAMENTO DE APOIO DE BELÉM",
+      "uf": "PA"
+    },
+    {
+      "code": "120629",
+      "name": "GRUPAMENTO DE APOIO DE CANOAS",
+      "uf": "RS"
+    },
+    {
+      "code": "120644",
+      "name": "GRUPAMENTO DE APOIO DE CURITIBA",
+      "uf": "PR"
+    },
+    {
+      "code": "120639",
+      "name": "GRUPAMENTO DE APOIO DE FLORIANOPOLIS",
+      "uf": "SC"
+    },
+    {
+      "code": "120640",
+      "name": "GRUPAMENTO DE APOIO DE FORTALEZA",
+      "uf": "CE"
+    },
+    {
+      "code": "120636",
+      "name": "GRUPAMENTO DE APOIO DE LAGOA SANTA",
+      "uf": "MG"
+    },
+    {
+      "code": "120630",
+      "name": "GRUPAMENTO DE APOIO DE MANAUS",
+      "uf": "AM"
+    },
+    {
+      "code": "120626",
+      "name": "GRUPAMENTO DE APOIO DE PIRASSUNUNGA",
+      "uf": "SP"
+    },
+    {
+      "code": "120632",
+      "name": "GRUPAMENTO DE APOIO DE RECIFE",
+      "uf": "PE"
+    },
+    {
+      "code": "120642",
+      "name": "GRUPAMENTO DE APOIO DE SALVADOR",
+      "uf": "BA"
+    },
+    {
+      "code": "120016",
+      "name": "GRUPAMENTO DE APOIO DE SÃO JOSÉ DOS CAMPOS",
+      "uf": "SP"
+    },
+    {
+      "code": "120633",
+      "name": "GRUPAMENTO DE APOIO DE SÃO PAULO",
+      "uf": "SP"
+    },
+    {
+      "code": "120625",
+      "name": "GRUPAMENTO DE APOIO DO DF",
+      "uf": "DF"
+    },
+    {
+      "code": "120645",
+      "name": "GRUPAMENTO DE APOIO DO GALEÃO",
+      "uf": "RJ"
+    },
+    {
+      "code": "120635",
+      "name": "GRUPAMENTO DE APOIO DO GUARATINGUETÁ",
+      "uf": "SP"
+    },
+    {
+      "code": "120623",
+      "name": "GRUPAMENTO DE APOIO DOS AFONSOS",
+      "uf": "RJ"
+    },
+    {
+      "code": "120040",
+      "name": "HOSPITAL CENTRAL DA AERONAUTICA/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120019",
+      "name": "HOSPITAL DE AERONAUTICA DE RECIFE",
+      "uf": "PE"
+    },
+    {
+      "code": "120086",
+      "name": "I COMANDO AEREO REGIONAL",
+      "uf": "PA"
+    },
+    {
+      "code": "120017",
+      "name": "II COMANDO AEREO REGIONAL",
+      "uf": "PE"
+    },
+    {
+      "code": "120067",
+      "name": "INSTITUTO DE CONTROLE DO ESPAÇO AÉREO",
+      "uf": "SP"
+    },
+    {
+      "code": "120059",
+      "name": "IV COMANDO AEREO REGIONAL",
+      "uf": "SP"
+    },
+    {
+      "code": "120043",
+      "name": "LABORAT.QUIMICO/FARMACEUT.DA AERON./RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120080",
+      "name": "MAER - BASE AEREA DE ANAPOLIS/GO",
+      "uf": "GO"
+    },
+    {
+      "code": "120073",
+      "name": "MAER - BASE AEREA DE FLORIANOPOLIS - SC",
+      "uf": "SC"
+    },
+    {
+      "code": "120024",
+      "name": "MAER - CENTRO DE INSTR.E ADAPTACAO DA AER/MG",
+      "uf": "MG"
+    },
+    {
+      "code": "120004",
+      "name": "MAER-BABR-BASE AEREA DE BRASILIA/DF",
+      "uf": "DF"
+    },
+    {
+      "code": "120027",
+      "name": "MAER-BASE AEREA DE CAMPO GRANDE/MS",
+      "uf": "MS"
+    },
+    {
+      "code": "120081",
+      "name": "MAER-BASE AEREA DE PORTO VELHO/RO",
+      "uf": "RO"
+    },
+    {
+      "code": "120030",
+      "name": "MAER-BASE AEREA DO GALEAO/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120029",
+      "name": "MAER-BASE AEREA DOS AFONSOS/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120038",
+      "name": "MAER-DIRETORIA DE MATERIAL AERONAUTICO/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120025",
+      "name": "MAER-EPCAR-ESCOLA PREPARAT.CADETES DO AR/MG",
+      "uf": "MG"
+    },
+    {
+      "code": "120006",
+      "name": "MAER-GAPBR-GRUPAMENTO DE APOIO DE BRASILIA/DF",
+      "uf": "DF"
+    },
+    {
+      "code": "120013",
+      "name": "MAER-GR.IMP.CENT.DE LANCAM.DE ALCANTARA/MA",
+      "uf": "MA"
+    },
+    {
+      "code": "120039",
+      "name": "MAER-GRUPAMENTO DE APOIO/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120096",
+      "name": "MAER-HOSPITAL DA FORCA AEREA DE BRASILIA/DF",
+      "uf": "DF"
+    },
+    {
+      "code": "120042",
+      "name": "MAER-HOSPITAL DE FORCA AEREA DO GALEAO/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120008",
+      "name": "MAER-I CENTRO INT.DEF.AER.CONTR.TFG.AEREO/DF",
+      "uf": "DF"
+    },
+    {
+      "code": "120028",
+      "name": "MAER-III COMANDO AEREO REGIONAL/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120005",
+      "name": "MAER-PABR-PREFEITURA DE AERON.DE BRASILIA/DF",
+      "uf": "DF"
+    },
+    {
+      "code": "120003",
+      "name": "MAER-VI COMAR COMANDO AEREO REGIONAL/DF",
+      "uf": "DF"
+    },
+    {
+      "code": "120083",
+      "name": "MAER-VII COMANDO AEREO REGIONAL/AM",
+      "uf": "AM"
+    },
+    {
+      "code": "120026",
+      "name": "MAER_PMALS_PQ.MAT.AERONAUTICO LAGOA SANTA/MG",
+      "uf": "MG"
+    },
+    {
+      "code": "120066",
+      "name": "NUCLEO DO HOSPITAL DE FORÇA AEREA DE S.PAULO",
+      "uf": "SP"
+    },
+    {
+      "code": "120048",
+      "name": "PARQUE DE MAT. DE ELETRON.DA AERONAUTICA/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120020",
+      "name": "PARQUE DE MATERIAL AERONAUTICO DE RECIFE",
+      "uf": "PE"
+    },
+    {
+      "code": "120068",
+      "name": "PARQUE DE MATERIAL AERONAUTICO DE SAO PAULO",
+      "uf": "SP"
+    },
+    {
+      "code": "120049",
+      "name": "PARQUE DE MATERIAL AERONAUTICO DO GALEAO/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120046",
+      "name": "PARQUE DE MATERIAL AERONAUTICO DOS AFONSOS/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120047",
+      "name": "PARQUE DE MATERIAL BELICO DA AERONAUTICA/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120045",
+      "name": "PREFEITURA AERONAUTICA DO GALEAO",
+      "uf": "RJ"
+    },
+    {
+      "code": "120097",
+      "name": "PREFEITURA DE AERONAUTICA DE SAO PAULO",
+      "uf": "SP"
+    },
+    {
+      "code": "120053",
+      "name": "PREFEITURA DE AERONAUTICA DOS AFONSOS/RJ",
+      "uf": "RJ"
+    },
+    {
+      "code": "120094",
+      "name": "QUARTO CENTRO INT. DEF. AEREA CONTR.TFG.AEREO",
+      "uf": "AM"
+    },
+    {
+      "code": "120074",
+      "name": "QUINTO COMANDO AÉREO REGIONAL/RS",
+      "uf": "RS"
+    },
+    {
+      "code": "120072",
+      "name": "SEGUNDO CENTRO INT.DEF.AEREA CONTR.TFG.AEREO",
+      "uf": "PR"
+    },
+    {
+      "code": "120069",
+      "name": "SERVICO REGIONAL DE PROTECAO AO VOO SAO PAULO",
+      "uf": "SP"
+    },
+    {
+      "code": "120100",
+      "name": "SUBDIRETORIA DE ABASTECIMENTO",
+      "uf": "SP"
+    },
+    {
+      "code": "120021",
+      "name": "TERCEIRO CENTRO INT.DEF.AEREA CONTR.TFG.AEREO",
+      "uf": "PE"
+    },
+    {
+      "code": "120054",
+      "name": "UNIVERSIDADE DA FORCA AEREA BRASILEIRA",
+      "uf": "RJ"
+    }
+  ]
+}
